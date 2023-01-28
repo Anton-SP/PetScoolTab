@@ -4,74 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/black">
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_class_icon"
-        android:layout_width="@dimen/icon_size_common"
-        android:layout_height="@dimen/icon_size_common"
-        android:layout_marginStart="@dimen/margin_common"
-        android:layout_marginTop="@dimen/margin_common"
-        android:layout_marginBottom="@dimen/margin_common"
-        android:background="@color/background_icon_gray"
-        android:src="@drawable/baseline_directions_bike_24"
-        app:layout_constraintBottom_toBottomOf="parent"
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_classes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_class_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_common"
-        android:layout_marginTop="@dimen/margin_common"
-        android:text="History"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/iv_class_icon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_class_teacher_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_common"
-        android:text="Teacher: "
-        android:textColor="@color/background_icon_gray"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@id/iv_class_icon"
-        app:layout_constraintTop_toBottomOf="@id/tv_class_name" />
-
-    <TextView
-        android:id="@+id/tv_class_teacher_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_common"
-        android:text="Mr Handerson"
-        android:textColor="@color/background_icon_gray"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@id/tv_class_teacher_label"
-        app:layout_constraintTop_toBottomOf="@id/tv_class_name" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#03A9F4">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:text="Open in"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
