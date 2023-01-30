@@ -2,4 +2,8 @@
 <resources>
     <dimen name="margin_common">20dp</dimen>
     <dimen name="icon_size_common">54dp</dimen>
+    <dimen name="exam_corner">20dp</dimen>
+    <dimen name="exam_elevation">12dp</dimen>
+    <dimen name="exam_value_radius">8dp</dimen>
+    <dimen name="exam_value_elevation">4dp</dimen>
 </resources>

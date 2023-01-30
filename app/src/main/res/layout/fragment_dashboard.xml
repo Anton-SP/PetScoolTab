@@ -4,13 +4,192 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/exam_time_countdown"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_exam_time_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/exam_corner"
+        app:cardElevation="@dimen/exam_elevation"
+        app:cardUseCompatPadding="true"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="12:12:12" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_days_first"
+                android:layout_width="48dp"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/exam_value_background"
+                app:cardCornerRadius="@dimen/exam_value_radius"
+                app:cardElevation="@dimen/exam_value_elevation"
+                app:cardUseCompatPadding="true"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_days_first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_common"
+                    android:hint="days">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_days_first"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="@color/black"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_days_second"
+                android:layout_width="48dp"
+                android:layout_height="56dp"
+                android:background="@color/background_icon_gray"
+                app:cardCornerRadius="@dimen/exam_value_radius"
+                app:cardElevation="@dimen/exam_value_elevation"
+                app:cardUseCompatPadding="true"
+                android:backgroundTint="@color/exam_value_background"
+                app:layout_constraintStart_toEndOf="@id/cv_days_first"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_days_second"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_common"
+                    android:hint="days">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_days_second"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_hours_first"
+                android:layout_width="48dp"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/exam_value_background"
+                android:background="@color/background_icon_gray"
+                app:cardCornerRadius="@dimen/exam_value_radius"
+                app:cardElevation="@dimen/exam_value_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toEndOf="@id/cv_days_second"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_hours_first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_common"
+                    android:hint="days">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_hours_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_hours_second"
+                android:layout_width="48dp"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/exam_value_background"
+                android:background="@color/background_icon_gray"
+                app:cardCornerRadius="@dimen/exam_value_radius"
+                app:cardElevation="@dimen/exam_value_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toEndOf="@id/cv_hours_first"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_hours_second"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_common"
+                    android:hint="days">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_hours_second"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_minutes_first"
+                android:layout_width="48dp"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/exam_value_background"
+                android:background="@color/background_icon_gray"
+                app:cardCornerRadius="@dimen/exam_value_radius"
+                app:cardElevation="@dimen/exam_value_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toEndOf="@id/cv_hours_second"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_minutes_first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_common"
+                    android:hint="days">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_minutes_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_minutes_second"
+                android:layout_width="48dp"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/exam_value_background"
+                android:background="@color/background_icon_gray"
+                app:cardCornerRadius="@dimen/exam_value_radius"
+                app:cardElevation="@dimen/exam_value_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toEndOf="@id/cv_minutes_first"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_minutes_second"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_common"
+                    android:hint="days">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_minutes_second"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_label_classes"
@@ -18,7 +197,7 @@
         android:layout_height="wrap_content"
         android:text="CLASSES"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/exam_time_countdown" />
+        app:layout_constraintTop_toBottomOf="@id/cv_exam_time_container" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_classes_count"
@@ -26,8 +205,7 @@
         android:layout_height="wrap_content"
         android:text="6 classes today"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/exam_time_countdown"
-        />
+        app:layout_constraintTop_toBottomOf="@id/cv_exam_time_container" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_classes"
@@ -35,8 +213,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/tv_label_classes"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_classes" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_label_homework"
@@ -52,9 +230,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/tv_label_homework"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_homework" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
