@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.home.DashboardFragment"
+        android:name="com.home.ui.dashboard.DashboardFragment"
         android:label="DashboardFragment" />
 </navigation>

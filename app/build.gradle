@@ -52,4 +52,6 @@ dependencies {
     //nav component
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.6'
 }
