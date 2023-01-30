@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PetScoolTab</string>
+    <string name="exam_welcome">Are you ready for exams</string>
+    <string name="days_label">Days</string>
+    <string name="hours_label">Hours</string>
+    <string name="minutes_label">Minutes</string>
 </resources>

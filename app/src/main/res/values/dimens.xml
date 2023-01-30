@@ -6,4 +6,9 @@
     <dimen name="exam_elevation">12dp</dimen>
     <dimen name="exam_value_radius">8dp</dimen>
     <dimen name="exam_value_elevation">4dp</dimen>
+    <dimen name="margin_border">18dp</dimen>
+    <dimen name="text_label_main">22sp</dimen>
+    <dimen name="margin_label_big">12dp</dimen>
+    <dimen name="margin_top_half">4dp</dimen>
+    <dimen name="label_common">16sp</dimen>
 </resources>
