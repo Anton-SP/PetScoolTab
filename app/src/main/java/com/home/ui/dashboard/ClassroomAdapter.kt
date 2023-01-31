@@ -15,13 +15,13 @@ class ClassroomAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClassroomViewHolder {
         val binding = ItemClassBinding.inflate(
-            LayoutInflater.from(parent.context),parent,false
+            LayoutInflater.from(parent.context), parent, false
         )
         val holder = ClassroomViewHolder(
             binding = binding,
             onCLick = onCLick
         )
-        return  holder
+        return holder
     }
 
     override fun getItemCount(): Int {
@@ -38,22 +38,17 @@ class ClassroomAdapter(
         notifyDataSetChanged()
     }
 
-
     inner class ClassroomViewHolder(
         private val binding: ItemClassBinding,
         private val onCLick: (Classroom) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(classroom:Classroom) {
+        fun bind(classroom: Classroom) {
             with(binding) {
                 tvClassName.text = classroom.name
                 tvClassTeacherName.text = classroom.teacher
             }
-
         }
-
-
-
     }
 
 

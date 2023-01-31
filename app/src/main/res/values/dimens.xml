@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_common">20dp</dimen>
+    <dimen name="margin_common">15dp</dimen>
     <dimen name="icon_size_common">54dp</dimen>
     <dimen name="exam_corner">20dp</dimen>
     <dimen name="exam_elevation">12dp</dimen>
